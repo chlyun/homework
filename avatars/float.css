@@ -1,4 +1,4 @@
-*{
+ *{
   margin: 0;
   padding: 0;
 }
@@ -35,14 +35,12 @@ header{
 }
 .avatars{ 
   display: flow-root;
-  width: 100%;
-  height: 100%;
   max-width: 336px;
   min-width: 336px;
 }
 .avatar{
   position:relative;
-  float: left;
+  float: left; 
 }
 
 .avatar_img{
@@ -74,3 +72,22 @@ header{
   top: 50px; ; left: 55px;
 }
 
+@supports (display: flex){
+
+  main{
+    display: flex;
+  }
+
+
+  .avatars{
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .man{
+    order: -1;
+  }
+  .woman{
+    order: 1;
+  }
+}

@@ -9,4 +9,8 @@ avater를 왼쪽에서 오른쪽으로 ->정렬시키기위해 float:left태그�
 
 max-width와 min-width를 사용한이유는 화면이 넓어지든 좁아지든 한줄에 4개를 유지하기위해 넣어줌
 
-사실 맞게한지 잘 모르겠다..ㅠㅠ
+flex를 이용한방법
+=========================
+display속성을 이용해 flex contanier를 정의하고  flex flow를 이용해 row 왼쪽에서 오른쪽으로 표시 float left와 비슷함을 이용 그리고 wrap를 준이유는 nowrap은 한줄에표시 wrap를 이용해서 여러줄묶음으로 만듬 
+order을 이용해서 man값을 -1로 앞으로당기고woman값을 1로줘서 뒤로미룸 여기서 woman 1은 굳이안줘도 되지만 써보려고 줘봤다 그리고 만약 wrap 줄바꿈에서 wrap-reverse를 주면 order을 굳이 사용할필요없이 반대로 나타났을거같다
+
