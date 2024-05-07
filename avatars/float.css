@@ -18,7 +18,6 @@ body,
 
 
 header{
-  display: flow-root;
   border: 1px solid #DBDBDB;
   width: 100%;
   height: 100%;
@@ -27,8 +26,7 @@ header{
   margin:10px 0 10px 0;
 }
 
-.main{
-  display: flow-root;
+.main{  
   width: 100%;
   height: 100%;
   
@@ -50,10 +48,7 @@ header{
   border-radius: 50%;
 }
 
-
-
-.avatar_gray{
-  background-color: #DBDBDB;
+.on_off{
   width: 20px;
   height: 20px;
   border: 2px solid white;
@@ -62,14 +57,12 @@ header{
   top: 50px; ; left: 55px;
 }
 
+.avatar_gray{
+  background-color: #DBDBDB;
+}
+
 .avatar_green{
   background-color: #4CFE88;
-  width: 20px;
-  height: 20px;
-  border: 2px solid white;
-  border-radius: 50%;
-  position: absolute;
-  top: 50px; ; left: 55px;
 }
 
 @supports (display: flex){
@@ -86,8 +79,5 @@ header{
 
   .man{
     order: -1;
-  }
-  .woman{
-    order: 1;
   }
 }
