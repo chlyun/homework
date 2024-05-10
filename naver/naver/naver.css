@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body{
+  font-size: 16px;
+  color: #181818;
+}
+
+.login{
+  margin-top: 3.125rem;
+}
+.login-form{
+  margin: 1.25rem  1.25rem 0 1.25rem ;
+}
+fieldset{
+  display: block;
+}
+.login_input_group{
+  width: 100%;
+  .id_input{
+    margin-bottom: 0.625rem;
+  }
+}
+
+.form_input{
+  display: flex;
+  flex-flow: row nowrap;
+  input{
+    height: 45px;
+    font-size:0.875rem ;
+    border: 1px solid #dadada;
+    width: 100%;
+    padding-left: 1.25rem;
+  }
+}
+.header{
+  margin-top: 12.5rem;
+}
+
+.header_inner{
+  display: flex;
+  justify-content: center;
+}
+.login_button{
+  margin-top: 1.25rem;
+  width: 100%;
+  font-size: 1rem;
+  height: 45px;
+  background-color: #03cf5d;
+  color: #fff;
+  
+}
+
+.member-sign{
+  margin: 0.625rem 1.25rem 1.25rem 1.25rem;
+  list-style-type: none;
+  display: flex;
+  width: inherit;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  .stay_logged_in {
+    display: flex;
+    position: relative;
+    
+    label{
+      padding-left: 1.8125rem;
+    }
+    input{
+      position: absolute;
+      width:24px;
+      height: 24px;
+      appearance: none;
+      background-image: url(./icons/unchecked.svg);    
+    }
+    input:checked{
+      background-image: url(./icons/checked.svg);
+    }
+  } 
+    
+  .ip_security{ 
+    .ip_securitypage{
+      color: black;
+      text-decoration-line: none;
+    }
+
+    input{
+      display: none;
+    }
+    label{
+      font-size: 1rem;
+      color: #dadada;
+      position: relative;
+      padding-left: 2.25rem;
+      cursor: pointer;
+      
+    }
+    label::before{
+      content: "OFF";
+      position: absolute;
+      right: 0.3125rem;
+    }
+
+    label::after{
+      content: "";
+      position: absolute;
+      right: 0.3125rem;
+    }
+    input:checked + label::before{
+      content: "ON";
+      color: rgb(23, 172, 23);
+    }
+  }
+}
