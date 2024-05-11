@@ -8,16 +8,32 @@ body{
   font-size: 16px;
   color: #181818;
 }
+.header{
+  margin-top: 12.5rem;
+}
 
+.header_inner{
+  display: flex;
+  justify-content: center;
+}
 
 .login{
   margin-top: 3.125rem;
+  display: flex; 
+  justify-content: flex-end;
+  align-content: center;
+  flex-flow: column wrap;
 }
 .login-form{
-  margin: 1.25rem  1.25rem 0 1.25rem ;
+  margin: 0 1.25rem;
+  width: calc(100% - 2.5rem);
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
 }
 fieldset{
-  display: block;
+  margin: 0 auto;
+  width: 100%;
 }
 .login_input_group{
   width: 100%;
@@ -34,21 +50,14 @@ fieldset{
     font-size:0.875rem ;
     border: 1px solid #dadada;
     width: 100%;
-    padding-left: 1.25rem;    
+    padding: 0 1.25rem;    
   }
   input:focus{
     background: #e9f0fd;
     outline: 1px solid #dadada;
   }
 }
-.header{
-  margin-top: 12.5rem;
-}
 
-.header_inner{
-  display: flex;
-  justify-content: center;
-}
 .login_button{
   margin-top: 1.25rem;
   width: 100%;
@@ -60,15 +69,16 @@ fieldset{
 }
 
 .member-sign{
-  margin: 0.625rem 1.25rem 1.25rem 1.25rem;
+  margin-top: 0.625rem;
   list-style-type: none;
   display: flex;
-  width: inherit;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: flex-end;
+  
 
   .stay_logged_in {
-    display: flex;
+    
+    
     position: relative;
     
     label{
@@ -76,6 +86,7 @@ fieldset{
     }
     input{
       position: absolute;
+      
       width:24px;
       height: 24px;
       appearance: none;
@@ -87,7 +98,30 @@ fieldset{
   } 
     
   .ip_security{
-    position: relative;
+    display: none;    
+  }
+
+}
+
+@media (min-width: 768px){
+
+  
+
+  fieldset{
+    min-width: 500px;
+  }
+  .login-form{
+    
+    max-width: 500px;
+    margin: 0 auto; 
+  }
+  .member-sign{ 
+    width: 100%;
+    justify-content: space-between;
+  
+    .ip_security{
+      display: flex;
+      position: relative;
 
     .ip_securitypage{
       text-align: center;
@@ -100,17 +134,18 @@ fieldset{
     }
     input{
       position: absolute;
-      right: 1px;
+      right: 3px;
       appearance: none;    
       text-align: center;
       height: 20px;
-      width: 36px;
+      width: 30px;
     }
     
     label{
       font-size: 1rem;
       color: #dadada;
-      position: relative;
+      right: 30px;
+      position: absolute;
       cursor: pointer;
     }
       
@@ -118,20 +153,22 @@ fieldset{
     label::before{
       content: "OFF";
       position: absolute;
-      right: 0.3125rem;
+      
     }
     
 
     label::after{
       content: "";
       position: absolute;
-      right: 0.3125rem;
       }
     input:checked + label::before{
       content: "ON";
       color: rgb(23, 172, 23);
+      
       }
     
+    }
+    
+  
   }
-
 }
