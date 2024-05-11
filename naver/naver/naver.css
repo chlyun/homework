@@ -9,6 +9,7 @@ body{
   color: #181818;
 }
 
+
 .login{
   margin-top: 3.125rem;
 }
@@ -33,7 +34,11 @@ fieldset{
     font-size:0.875rem ;
     border: 1px solid #dadada;
     width: 100%;
-    padding-left: 1.25rem;
+    padding-left: 1.25rem;    
+  }
+  input:focus{
+    background: #e9f0fd;
+    outline: 1px solid #dadada;
   }
 }
 .header{
@@ -81,37 +86,52 @@ fieldset{
     }
   } 
     
-  .ip_security{ 
+  .ip_security{
+    position: relative;
+
     .ip_securitypage{
+      text-align: center;
+      position: absolute;
+      width: 60px;
+      right:35px;
       color: black;
       text-decoration-line: none;
+      
     }
-
     input{
-      display: none;
+      position: absolute;
+      right: 1px;
+      appearance: none;    
+      text-align: center;
+      height: 20px;
+      width: 36px;
     }
+    
     label{
       font-size: 1rem;
       color: #dadada;
       position: relative;
-      padding-left: 2.25rem;
       cursor: pointer;
-      
     }
+      
+    
     label::before{
       content: "OFF";
       position: absolute;
       right: 0.3125rem;
     }
+    
 
     label::after{
       content: "";
       position: absolute;
       right: 0.3125rem;
-    }
+      }
     input:checked + label::before{
       content: "ON";
       color: rgb(23, 172, 23);
-    }
+      }
+    
   }
+
 }
