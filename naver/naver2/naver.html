@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/naver/naver.css" />
+    <title>네이버 로그인</title>
+  </head>
+  <body>
+    <section class="login-section">
+      <!-- 네이버 로고 -->
+      <h1>
+        <a href="/">
+          <picture>
+            <source srcset="/naver/icons/logo.svg" width="230px" />
+            <img src="/naver/icons/logo.png" alt="네이버" width="230px" />
+          </picture>
+        </a>
+      </h1>
+
+      <!-- 로그인 폼 -->
+      <form action="/" class="login-form">
+        <fieldset>
+          <legend class="sr-only">로그인 폼</legend>
+
+          <!-- Email/Pwd 입력-->
+          <div class="input-group login-input-group">
+            <!-- Email input -->
+            <div role="group" class="form-input">
+              <label for="userEmail" class="sr-only">아이디</label>
+              <input
+                type="email"
+                id="userEmail"
+                required
+                placeholder="아이디(이메일)"
+              />
+            </div>
+            <!-- Pwd input -->
+            <div role="group" class="form-input">
+              <label for="userPwd" class="sr-only">비밀번호</label>
+              <input
+                type="password"
+                id="userPwd"
+                required
+                placeholder="비밀번호"
+              />
+            </div>
+          </div>
+
+          <!-- 로그인 옵션 설정 -->
+          <div class="login-option-group">
+            <div role="group" class="form-checkbox keep-login-checkbox">
+              <input type="checkbox" id="keepLogin" name="keepLogin" />
+              <label for="keepLogin">로그인 상태 유지</label>
+            </div>
+            <div role="group" class="form-checkbox ip-security-checkbox">
+              <a
+                href="/naver/ip_security.html"
+                target="_blank"
+                rel="noreferrer noopener"
+                >IP 보안</a
+              >
+              <label for="ipSecurity" class="sr-only">IP 보안</label>
+              <input type="checkbox" id="ipSecurity" name="ipSecurity" />
+            </div>
+          </div>
+
+          <!-- 로그인 버튼 -->
+          <button type="submit" class="button login-button">로그인</button>
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>

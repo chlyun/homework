@@ -1,0 +1,189 @@
+@import url(/naver/base.css);
+
+/* 포커스 아웃라인 스타일 */
+*:focus {
+  outline: 0.125rem solid #24388d;
+}
+
+/* 로그인 섹션 */
+.login-section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+
+  h1 {
+    margin: 4rem 0;
+  }
+}
+
+/* 로그인 폼 */
+.login-form {
+  width: 100%;
+  inline-size: 100%;
+
+  fieldset {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+
+/* 버튼 컴포넌트 */
+.button {
+  --button-height: 2.8125rem;
+
+  font-size: 1rem;
+  height: var(--button-height);
+  block-size: var(--button-height);
+  line-height: var(--button-height);
+  border: none;
+  cursor: pointer;
+}
+/* 버튼 레이아웃 스타일 */
+.login-button {
+  color: #fff;
+  background: #03cf5d;
+  margin-top: 1.25rem;
+}
+
+/* ID/PWD input 컴포넌트 */
+.input-group {
+  --input-gap: 0.625rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--input-gap);
+
+  .form-input {
+    --font-size: 0.875rem;
+    --input-height: 2.8125rem;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    input {
+      flex-grow: 1;
+      font-size: var(--font-size);
+      height: var(--input-height);
+      block-size: var(--input-height);
+      line-height: var(--input-height);
+      padding: 0 0.875rem;
+
+      border: 1px solid var(--border-color);
+      background: var(--bg-color);
+    }
+  }
+}
+/* ID/PWD input 레이아웃 스타일 */
+.login-input-group {
+  .form-input {
+    input {
+      border: 1px solid #dadada;
+      background: #fff;
+    }
+    input:focus {
+      border-color: #03cf5d;
+      background: #e9f0fd;
+      outline: none;
+    }
+  }
+}
+
+/* 로그인 버튼 아래 옵션 그룹 */
+.login-option-group {
+  order: 1;
+  margin-top: 0.625rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+/* 체크박스 컴포넌트 */
+.form-checkbox {
+  --label-height: 1.5rem;
+
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  input {
+    appearance: none;
+  }
+  input:hover {
+    cursor: pointer;
+  }
+
+  label {
+    display: block;
+    height: var(--label-height);
+    block-size: var(--label-height);
+    line-height: var(--label-height);
+    cursor: pointer;
+  }
+
+  input:focus {
+    outline: none;
+  }
+  input:focus-visible {
+    outline: 2px solid #24388d;
+  }
+}
+
+/* 로그인 상태 유지 체크박스 */
+.keep-login-checkbox {
+  --checkbox-size: 1.5rem;
+
+  input {
+    position: absolute;
+    width: var(--checkbox-size);
+    inline-size: var(--checkbox-size);
+    height: var(--checkbox-size);
+    block-size: var(--checkbox-size);
+  }
+
+  label {
+    background: url(/naver/icons/unchecked.svg) no-repeat 0 0 / 1.5rem 1.5rem;
+    padding-left: calc(var(--checkbox-size) + 0.3125rem);
+  }
+  input:checked + label {
+    background: url(/naver/icons/checked.svg) no-repeat 0 0 / 1.5rem 1.5rem;
+  }
+}
+
+/* IP보안 체크박스 */
+.ip-security-checkbox {
+  input::after {
+    padding-left: 0.3125rem;
+    height: 1.5rem;
+    content: "OFF";
+    font-size: 1rem;
+    color: #dadada;
+  }
+  input:checked {
+    &::after {
+      content: "ON";
+      color: #03cf5d;
+    }
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .ip-security-checkbox {
+    display: none;
+  }
+}
+
+/* 데스크탑 */
+@media (min-width: 768px) {
+  .login-form {
+    width: 500px;
+    inline-size: 500px;
+  }
+
+  .login-option-group {
+    justify-content: space-between;
+  }
+}
