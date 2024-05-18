@@ -8,6 +8,7 @@
 ====================
 a태그인 링크태그에 aria label을 활용하여 스크린리더가 읽어줄때 버튼의 상세설명을 붙혀줌
 
+그림판으로 살짝 그려보고시작한 사진 첨부해봅니다..
 <img width="50%" src="https://github.com/chlyun/homework/assets/119630708/c6be4601-6e5a-4fe0-9f83-09bea6b32e4f"/>
 
 
