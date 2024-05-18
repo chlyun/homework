@@ -11,6 +11,7 @@
 
   /* Box Size */
   --size: 31.25rem; /* 500px - 카드 높이 고정 값 */
+  --large-size: 36.25rem; /* 500px - 카드 높이 고정 값 */
 
   /* Text Size */
   --xx-small-text: 0.75rem; /* 12px - Small Screen 버튼(링크) 글자 크기 */
